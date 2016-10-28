@@ -1,0 +1,6 @@
+[ClassVersion("1.0"), FriendlyName("AFCompressFolder")]
+class MSFT_AFCompressFolder : OMI_BaseResource
+{
+    [Key, Description("Path of the folder to compress")] string Path;
+    [Write,ValueMap{"Present", "Absent"},Values{"Present", "Absent"},Description("Whether the bindings should be present or absent")] string Ensure;
+};

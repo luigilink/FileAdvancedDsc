@@ -1,0 +1,7 @@
+[ClassVersion("1.0.0.0"), FriendlyName("AFFreeSpace")]
+class MSFT_AFFreeSpace : OMI_BaseResource
+{
+    [Key, Description("Return Present if disk has enough free space, and absent in other way), ValueMap{"Present","Absent"}, Values{"Present","Absent"}] String Ensure;
+    [Required, Description("Drive letter of disk to check free space")] String DriveLetter;
+    [Write, Description("Free percent to check on drive letter")] UInt16 FreePercent;
+};
